@@ -28,4 +28,16 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_send"
         android:id="@+id/btn_send_id"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_call"
+        android:id="@+id/btn_call_id"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_naver"
+        android:id="@+id/btn_naver_id"/>
 </LinearLayout>

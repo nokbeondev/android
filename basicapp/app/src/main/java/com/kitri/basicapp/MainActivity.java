@@ -1,11 +1,14 @@
 package com.kitri.basicapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn = findViewById(R.id.btn_id);
         Button btnSend = findViewById(R.id.btn_send_id);
+        Button btnCall = findViewById(R.id.btn_call_id);
+        Button btnNaver = findViewById(R.id.btn_naver_id);
 
         btn.setOnClickListener(new View.OnClickListener(){
 
@@ -44,5 +49,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:010-3729-3714")); // 전달할 데이터를 intent에 담음
+                startActivity(intent); // 담고나서 intent에 담긴 엑티비티(화면) 시작!
+            }
+        });
+
+        btnNaver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.naver.com")); // 전달할 데이터를 intent에 담음
+                startActivity(intent); // 담고나서 intent에 담긴 엑티비티(화면) 시작!
+            }
+        });
+
     }
 }
