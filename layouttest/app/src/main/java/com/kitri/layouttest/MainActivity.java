@@ -19,11 +19,20 @@ public class MainActivity extends AppCompatActivity {
         Button btnRelative = findViewById(R.id.btn_relative);
         Button btnGrid = findViewById(R.id.btn_grid);
         Button btnFrame = findViewById(R.id.btn_frame);
+        Button btnLinear2 = findViewById(R.id.btn_linear2);
 
         btnLinear.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LinearActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLinear2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LinearActivity2.class);
                 startActivity(intent);
             }
         });
