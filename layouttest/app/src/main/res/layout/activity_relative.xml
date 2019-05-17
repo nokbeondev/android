@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_app_bg"
     tools:context=".RelativeActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userid_tv"
+        android:textSize="25dp"
+        android:text="@string/str_id"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userid_tv"
+        android:layout_alignLeft="@+id/userid_tv"
+        android:layout_alignStart="@+id/userid_tv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/userid_et"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userpwd_tv"
+        android:textSize="25dp"
+        android:text="@string/str_pwd"
+        android:layout_below="@+id/userid_et"
+        android:layout_alignLeft="@+id/userid_et"
+        android:layout_alignStart="@+id/userid_et"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userpwd_tv"
+        android:layout_alignLeft="@+id/userpwd_tv"
+        android:layout_alignStart="@+id/userpwd_tv"
+        android:layout_marginTop="10dp"
+        android:id="@+id/useripwd_et"
+        android:layout_marginRight="20dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_login"
+        android:textSize="25dp"
+        android:background="@color/color_bg"
+        android:id="@+id/btn_login"
+        android:textColor="@color/color_txt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_join"
+        android:textSize="25dp"
+        android:background="@color/color_bg"
+        android:textColor="@color/color_txt"
+        android:id="@+id/btn_join"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

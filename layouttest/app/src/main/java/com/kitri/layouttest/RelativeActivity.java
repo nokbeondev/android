@@ -11,4 +11,3 @@ public class RelativeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_relative);
     }
 }
-
